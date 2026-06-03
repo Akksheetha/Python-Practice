@@ -1,0 +1,11 @@
+from selenium import webdriver
+import time
+driver = webdriver.Chrome()
+driver.get("https://www.google.com/")
+driver.maximize_window()
+time.sleep(5)
+print("Opened the google")
+print(driver.title)
+# driver.save_screenshot("Sample.png")
+# print(driver.page_source)
+driver.quit()

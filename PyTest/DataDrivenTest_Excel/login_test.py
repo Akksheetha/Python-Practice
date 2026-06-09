@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from Utilities import logCreator
 from Utilities import excelReader
 
-@pytest.mark.parametrize("username,password",excelReader.get_data("ExcelFiles/loginData.xlsx","login"))
+@pytest.mark.parametrize("username,password",excelReader.get_data(excelReader.get_data("DataDrivenTest_Excel/ExcelFiles/loginData.xlsx","login")))
 class TestLogin:
     def test_validlogin(self,username,password):
         logger = logCreator.log_generator()
